@@ -13,19 +13,19 @@ import jakarta.persistence.Table;
 @Table(name = "tb_user")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	private String nome;
 	private String email;
 	private String phone;
 	private String passaword;
 
-	public User () {	
+	public User() {
 	}
 
-	public User(long id, String nome, String email, String phone, String passaword) {
+	public User(Long id, String nome, String email, String phone, String passaword) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -34,11 +34,11 @@ public class User implements Serializable {
 		this.passaword = passaword;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -90,5 +90,5 @@ public class User implements Serializable {
 		User other = (User) obj;
 		return id == other.id;
 	}
-	
+
 }
